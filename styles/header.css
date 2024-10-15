@@ -23,7 +23,6 @@
     right: 18px;
     width: 32px;
     height: 32px;
-    /* background-color: gray; */
 }
 
 .nav__burger,
@@ -48,10 +47,8 @@
     left: 0;
     top: 2.5rem;
     width: 100%;
-    /* background-color: gray; */
     height: calc(100vh - 3.5rem);
     overflow: auto;
-    /* pointer-events: none; */
     opacity: 0;
     transition: top .4s, opacity .3s;
 }
@@ -118,7 +115,6 @@
     display: flex;
     align-items: center;
     column-gap: .5rem;
-    /* font-weight: var(--font-semi-bold); */
     transition: bacground-color .3s;
 }
 
@@ -134,7 +130,6 @@
     display: flex;
     align-items: center;
     column-gap: .5rem;
-    /* font-weight: var(--font-semi-bold); */
     transition: bacground-color .3s;
 }
 
@@ -156,18 +151,6 @@
     overflow: hidden;
     transition: max-height 4.s ease-out;
 }
-
-/* Show dropdown menu & submenu */
-/* .dropdown__item:hover .dropdown__menu,
-.dropdown__subitem:hover > .dropdown__submenu{
-    max-height: 1000px;
-    transition: max-height .4s ease-in;
-} */
-
-/* Rotate dropdown icon */
-/* .dropdown__item:hover .dropdown__arrow{
-    transform: rotate(180deg);
-} */
 
 /*=============== DROPDOWN SUBMENU ===============*/
 .dropdown__add{
@@ -193,3 +176,62 @@
 }
 
 
+.contaier__nav__cliente{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--orange);
+    padding: 1.50rem 0;
+}
+
+.nav__cliente{
+    color: white;
+    padding: 1.25rem;
+}
+
+.nav__link a{
+    color: var(--white);
+}
+
+.nav__link__descktop{
+    display: none;
+}
+
+@media screen and (min-width: 1728px) {
+    .nav__toggle{
+        display: none;
+    }
+
+    .nav__link__descktop{
+        display: block;
+    }
+
+    .nav__link__descktop ul{
+        display: flex;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .nav__link__descktop ul li a{
+        color: var(--white);
+        cursor: pointer;
+    }
+
+    .nav__menu{
+        display: none;
+    }
+
+    .nav__data{
+        justify-content: space-between;
+    }
+
+    .nav__data img{
+        padding: 1rem;
+        width: 250px;
+    }
+
+    .nav__data{
+        width: 1250px;
+        margin: auto;
+    }
+}

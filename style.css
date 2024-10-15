@@ -1,6 +1,7 @@
 /* Connecting the header.css to our main css file, linking here will be more 
 efficient when loading the website */
 @import url("./styles/header.css");
+@import url(./styles/categorias.css);
 
 /* REMIXICONS */
 @import url(https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css);
@@ -24,7 +25,6 @@ All fonts and colors must be placed here for organization purpose. */
 
 /* Positionings and styling that will affect the intire body */
 body{
-    height: 100vh;
     font-family: var(--primary-font);
     background-color: var(--cor-de-fundo);
 }
