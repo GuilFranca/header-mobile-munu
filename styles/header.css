@@ -1,0 +1,181 @@
+.header {
+    background-color: var(--blue);
+    box-shadow: 0 2px 16px hsla(220, 32%, 8%, .3);
+}
+
+.nav__data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav__data img {
+    padding-top: 2px;
+    width: 185px;
+}
+
+.nav__toggle i {
+    color: var(--white);
+}
+
+.nav__toggle {
+    position: absolute;
+    right: 18px;
+    width: 32px;
+    height: 32px;
+    /* background-color: gray; */
+}
+
+.nav__burger,
+.nav__close{
+    cursor: pointer;
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    /* atalho para definir as quatro propriedades de deslocamento de um elemento posicionado: top, right, bottom, e left */
+    inset: 0;
+    margin: auto;
+    font-size: 1.5rem;
+    transition: opacity .1s, transform .4s;
+}
+
+.nav__close{
+    opacity: 0;
+}
+
+.nav__menu{
+    position: absolute;
+    left: 0;
+    top: 2.5rem;
+    /* top: 2.5rem; */
+    width: 100%;
+    /* background-color: gray; */
+    height: calc(100vh - 3.5rem);
+    overflow: auto;
+    /* pointer-events: none; */
+    opacity: 0;
+    transition: top .4s, opacity .3s;
+}
+
+.nav__menu::-webkit-scrollbar{
+    width: 0;
+}
+
+.nav__list{
+    background-color: var(--blue);
+    padding-top: 1rem;
+}
+
+.nav ul a{
+    text-decoration: none;
+}
+
+.nav__link{
+    color: var(--white);
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color .3s;
+}
+
+.nav__link:hover{
+    background-color: var(--blue-hover);
+}
+
+/* Show menu */
+.show-menu{
+    opacity: 1;
+    top: 3.5rem;
+    pointer-events: initial;
+}
+
+/* Show icon */
+.show-icon .nav__burger{
+    opacity: 0;
+    transform: rotate(90deg);
+}
+
+.show-icon .nav__close{
+    opacity: 1;
+    transform: rotate(90deg);
+}
+
+/*=============== DROPDOWN ===============*/
+.dropdown__item{
+    cursor: pointer;
+}
+
+.dropdown__arrow{
+    font-size: 1.25rem;
+    font-weight: initial;
+    transition: transform .4s;
+}
+
+.dropdown__link{
+    padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+    color: var(--white);
+    background-color: var(--black-color-light);
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    /* font-weight: var(--font-semi-bold); */
+    transition: bacground-color .3s;
+}
+
+.dropdown__link a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+.dropdown__sublink{
+    padding: 1.25rem 1.25rem 1.25rem 3.5rem;
+    color: var(--white);
+    background-color: var(--black-color-light);
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    /* font-weight: var(--font-semi-bold); */
+    transition: bacground-color .3s;
+}
+
+.dropdown__link i,
+.dropdown__sublink i{
+    padding-right: 5px;
+    font-size: 1.25rem;
+    font-weight: initial;
+}
+
+.dropdown__link:hover,
+.dropdown__sublink:hover{
+    background-color: var(--blue-hover);
+}
+
+.dropdown__menu,
+.dropdown__submenu{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 4.s ease-out;
+}
+
+/* Show dropdown menu & submenu */
+/* .dropdown__item:hover .dropdown__menu,
+.dropdown__subitem:hover > .dropdown__submenu{
+    max-height: 1000px;
+    transition: max-height .4s ease-in;
+} */
+
+/* Rotate dropdown icon */
+/* .dropdown__item:hover .dropdown__arrow{
+    transform: rotate(180deg);
+} */
+
+/*=============== DROPDOWN SUBMENU ===============*/
+.dropdown__add{
+    margin-left: auto;
+    transition: transform .2s;
+}
+
+.dropdown__sublink{
+    background-color: var(--black-color-lighten);
+}
