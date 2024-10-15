@@ -47,7 +47,6 @@
     position: absolute;
     left: 0;
     top: 2.5rem;
-    /* top: 2.5rem; */
     width: 100%;
     /* background-color: gray; */
     height: calc(100vh - 3.5rem);
@@ -179,3 +178,18 @@
 .dropdown__sublink{
     background-color: var(--black-color-lighten);
 }
+
+/* Dropdown menu initially closed */
+.dropdown__menu,
+.dropdown__submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}
+
+/* Rotating arrow when dropdown is active */
+.dropdown__item.active .dropdown__arrow {
+    transform: rotate(180deg);
+}
+
+
